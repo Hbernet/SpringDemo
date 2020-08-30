@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <script src="WEB-INF/js/angularjs/angular.min.js"></script>
+</head>
+<!--双向绑定 模型可定义初始值-->
+<body ng-app ng-init="username='hb'">
+    用户名：<input type="text" ng-model="username" value="123"><br>
+
+    欢迎{{username}}来到此页面
+</body>
+</html>

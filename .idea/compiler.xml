@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ActiveMQDemo" target="1.8" />
+      <module name="AngularJS" target="1.8" />
+      <module name="BaseQueue" target="1.8" />
+      <module name="BaseTopic" target="1.8" />
+      <module name="casclient-demo1" target="1.8" />
+      <module name="casclient-demo2" target="1.8" />
+      <module name="casclient-demo3" target="1.8" />
+      <module name="CASDemo" target="1.8" />
+      <module name="DubboService" target="1.8" />
+      <module name="DubboWeb" target="1.8" />
+      <module name="EmailDemo" target="1.8" />
+      <module name="Fanout" target="1.8" />
+      <module name="FreemarkerDemo" target="1.8" />
+      <module name="HelloWorld" target="1.8" />
+      <module name="RabbitMQ" target="1.8" />
+      <module name="Routing" target="1.8" />
+      <module name="SmsDemo" target="1.8" />
+      <module name="SpringDataRedisDemo" target="1.8" />
+      <module name="SpringDataSolr" target="1.8" />
+      <module name="SpringSecurity" target="1.8" />
+      <module name="WorkQueue" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo6</title>
+    <script src="WEB-INF/js/angularjs/angular.min.js"></script>
+    <script>
+        //定义模块 myApp表示模块名 []其他模块 目前没有为空
+        var app=angular.module("myApp",[]);
+        //定义控制器 通过模块定义
+        app.controller("myController",function ($scope) {
+            $scope.list=[
+                {name:"哈哈",age:"12",sex:"男"},
+                {name:"呵呵",age:"14",sex:"女"},
+                {name:"嘿嘿",age:"16",sex:"男"}
+            ];
+        });
+    </script>
+</head>
+<!--双向绑定 模型可定义初始值-->
+<body ng-app="myApp" ng-controller="myController">
+
+   <table style="border: 1px black solid ">
+       <tr>
+           <td>姓名</td>
+           <td>年龄</td>
+           <td>性别</td>
+       </tr>
+       <tr ng-repeat="person in list">
+           <td >{{person.name}}</td>
+           <td >{{person.age}}</td>
+           <td >{{person.sex}}</td>
+       </tr>
+   </table>
+
+</body>
+</html>

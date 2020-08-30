@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo4</title>
+    <script src="WEB-INF/js/angularjs/angular.min.js"></script>
+    <script>
+        //定义模块 myApp表示模块名 []其他模块 目前没有为空
+        var app=angular.module("myApp",[]);
+        //定义控制器 通过模块定义
+        app.controller("myController",function ($scope) {
+
+            $scope.n1=100;
+
+            $scope.n2=200;
+
+            $scope.getSum =function () {
+                alert( $scope.n1+$scope.n2);
+            }
+
+            $scope.showSum=$scope.getSum;
+
+            $scope.showFun=function () {
+                alert($scope.getSum)
+            }
+
+        })
+    </script>
+</head>
+<!--双向绑定 模型可定义初始值-->
+<body ng-app="myApp" ng-controller="myController">
+
+    num1:<input type="text" ng-model="n1"><br>
+
+    num2:<input type="text" ng-model="n2"><br>
+
+    <button ng-click="showSum()">求和</button><br>
+
+    <button ng-click="showFun()">显示方法体</button>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../AngularJS" />
+    <file type="web" url="file://$PROJECT_DIR$/../CASDemo/casclient-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/../CASDemo/casclient-demo2" />
+    <file type="web" url="file://$PROJECT_DIR$/../CASDemo/casclient-demo3" />
+    <file type="web" url="file://$PROJECT_DIR$/../DubboService" />
+    <file type="web" url="file://$PROJECT_DIR$/../DubboWeb" />
+    <file type="web" url="file://$PROJECT_DIR$/../SpringSecurity" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../ActiveMQDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../CASDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../ActiveMQDemo/BaseQueue/pom.xml" />
+        <option value="$PROJECT_DIR$/../ActiveMQDemo/BaseTopic/pom.xml" />
+        <option value="$PROJECT_DIR$/../ActiveMQDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../CASDemo/casclient-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../CASDemo/casclient-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/../CASDemo/casclient-demo3/pom.xml" />
+        <option value="$PROJECT_DIR$/../CASDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/Fanout/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/HelloWorld/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/Routing/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/WorkQueue/pom.xml" />
+        <option value="$PROJECT_DIR$/../RabbitMQ/pom.xml" />
+      </set>
+    </option>
+  </component>
+</project>

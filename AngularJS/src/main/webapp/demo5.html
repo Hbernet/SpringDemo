@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo5</title>
+    <script src="WEB-INF/js/angularjs/angular.min.js"></script>
+    <script>
+        //定义模块 myApp表示模块名 []其他模块 目前没有为空
+        var app=angular.module("myApp",[]);
+        //定义控制器 通过模块定义
+        app.controller("myController",function ($scope) {
+            $scope.arr=[1,2,3,4,5,6]
+        })
+    </script>
+</head>
+<!--双向绑定 模型可定义初始值-->
+<body ng-app="myApp" ng-controller="myController">
+
+   <table  style="border: 1px black solid">
+       <tr>
+           <td ng-repeat="n in arr" >
+               {{n}}
+           </td>
+       </tr>
+   </table>
+
+   <table style="border: 1px black solid ">
+       <tr ng-repeat="n in arr">
+           <td >
+               {{n}}
+           </td>
+       </tr>
+   </table>
+
+</body>
+</html>

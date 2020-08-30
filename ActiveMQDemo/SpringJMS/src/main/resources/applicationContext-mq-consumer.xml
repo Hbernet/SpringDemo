@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 真正可以产生Connection的ConnectionFactory，由对应的 JMS服务厂商提供-->
+    <bean id="factory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://192.168.188.133:61616"/>
+    </bean>
+    <!-- Spring用于管理真正的ConnectionFactory的ConnectionFactory -->
+    <bean id="singleFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+        <property name="targetConnectionFactory" ref="factory" />
+    </bean>
+    <!--Queue 队列目的地-->
+    <bean id="myQueue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg name="name" value="springQueue" />
+    </bean>
+    <!--Topic 订阅目的地-->
+    <bean id="myTopic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg name="name" value="springTopic" />
+    </bean>
+
+    <!-- 消费者监听类-->
+    <bean id="MyListener" class="com.hb.listener.MyListener" />
+    <!-- 消息队列监听容器 -->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="singleFactory" />
+        <property name="destination" ref="myQueue" /><!--只能选取队列或者订阅一种-->
+        <property name="messageListener" ref="MyListener" />
+    </bean>
+    <!-- 消息订阅监听容器 -->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="singleFactory" />
+        <property name="destination" ref="myTopic" /><!--只能选取队列或者订阅一种-->
+        <property name="messageListener" ref="MyListener" />
+    </bean>
+
+
+</beans>
